@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Sat Oct 15 18:18:38 BRT 2016
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=main.tex
+outputFile=darpa_terramax.pdf
+langSpell=pt
+markDer=true
+srcDir=
