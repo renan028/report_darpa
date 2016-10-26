@@ -44,16 +44,52 @@ modificá-la se for necessário.
   faixas, e outros.
   
   \item \textit{Sensor} - \textit{drivers} de sensores, usados para os
-  algorítmos de percepção, como câmeras, LIDAR, e outros.
+  algoritmos de percepção, como câmeras, LIDAR, e outros.
   
   \item \textit{Vehicle Status and Navigation} - sensores para o sistema de
   controle, como posição, velocidade, aceleração e estado do veículo.
 \end{enumerate}
  
- \begin{figure}[!ht]
+\begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{figs/camadas.png}
+\includegraphics[width=\columnwidth]{figs/camadas.jpg}
 \caption{Arquitetura de camadas do veículo TerraMax}
 \label{fig:camadas}
 \end{figure}
- 
+
+O autor não se aprofunda, no artigo, em como é realizada a integração entre as
+camadas, isto é, como a informação e dados transitam, porém ele utiliza
+uma terminologia comumente presente na literatura: ``serviços'' e
+``\textit{publisher-subscriber}''. Frameworks como o ROS, estado da arte,
+possibilitam a utilização de ambos os tipos de comunicação.
+
+\begin{itemize}
+  \item \textit{serviço ou cliente-servido} -  componentes falam diretamente
+  com outros componentes. As vantagens deste protocolo são: definição prévia da
+  interface; e é uma abordagem distribuída para comunicação, já que não há um
+  módulo central que distribui os dados. Uma desvantagem deste protocolo é o
+  \textit{overhead}, que é significativo se muitos componentes precisam de uma
+  mesma informação.
+  
+  \item \textit{publish-subscriber} - um componente publica dados e qualquer outro componente
+pode subscrever (ouvir) a esse dado. Normalmente, há um processo central que
+roteia os dados entre \textit{publish} e \textit{subscriber}. Em uma arquitetura
+típica, um componente pode publicar e subscrever a vários tipos de informações.
+As vantagens desse protocolo de comunicação são: simplicidade e pouco
+\textit{overhead}; ideal quando não se sabe quantos componentes diferentes
+necessitarão dos dados (como em muitas interfaces); componentes não ficam
+sobrecarregados em caso de múltiplos pedidos de um mesmo dado. Suas principais
+desvantagens são: difícil depuração de código, pois normalemente a sintaxe da
+mensagem está escondida em uma simples \textit{string} (uma \textit{lista}
+pode ser enviado como \textit{string} e o componente subscritor retraduz);
+utilização de um servidor central que distribui as mensagens (recebe dos
+\textit{publishers} e envia aos \textit{subscribers}), o que pode criar um único
+ponto de falha e sobrecarga.
+   
+\end{itemize}
+
+As camadas de \textit{System Control and User Interface} e \textit{Autonomous
+Behavior} se comunicam através de mensagens do tipo serviço, enquanto que os
+dados da camada \textit{Sensor} são publicados para as demais camadas.
+
+\subsection{Autonomous Behavior}
