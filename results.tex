@@ -1,5 +1,26 @@
 \section{Resultados}
 
-\subsubsection{Performance}
+Esta seção é dedicada a apresentar os resultados do TerraMax no evento DGC 2007 e quais foram os principais desafios encontrados e avaliações e soluções propostas.
 
-\subsubsection{Desafios Encontrados e Soluções Propostas}
+Anteriormente ao evento principal do DGC, os participantes foram testados em uma etapa de qualificação. Durante essa etapa, o TerraMax foi capaz de completar todas as manobras autônomas exigidas pelo desafio, tais como confluência em tráfego, cruzamentos, bloqueio de rua e retorno, ultrapassagem e estacionamento.
+
+Alguns dos problemas já foram antecipados nesta etapa do desafio e a equipe elaborou uma lista dos problemas, causas, impactos na performance e ações de correção.
+
+Um dos problemas foi a navegação no meio da pista devido à estreita faixa de rolamento. Por vezes, objetos próximos aos limites da pista eram detectados, e, devido ao parâmetro de segurança de distância ao limite da pista, o robô acabou andando no meio da via urbana. A ação de correção tomada foi diminuir o parâmetro de segurança e a lição aprendida foi que é realmente difícil navegar com um veículo de grande porte em uma via urbana.
+
+Outro problema apontado foi o de nuvem de poeira criada pelo próprio veículo em manobras bruscas de frenagem. Essa nuvem compromete tanto os sistemas de visão como os LIDARs para detecção de obstáculos, criando falsos positivos (nuvem de poeira detectada como obstáculo) e fazendo o veículo parar e demorar mais a completar a missão, esperando a poeira baixar.
+
+Um terceiro problema a destacar foi a oclusão de obstáculos, como um veículo sendo ocluso por outro em um cruzamento. Isso levou à tomada errada de decisões em situações de cruzamento e a equipe tentou corrigir o problema aprimorando o sistema de rastreamento dos veículos por visão e a fusão sensorial entre visão e \emph{laser scans}.
+
+Um erro em um dos LIDARs também causou problemas ao robô, que quase colidiu com um veículo à sua frente. O erro foi corrigido, mas ficou a lição de que redundância é importante em veículos autônomos.
+
+Durante o evento principal, o robô autônomo completou as primeiras quatro sub-missões com sucesso, porém parou na parte do estacionamento devido a um problema de \emph{software}. O robô realizou a manobra de entrada e saída da vaga de estacionamento normalmente. Porém, após sair da vaga, o planejador de trajetórias, devido a um \emph{bug} de \emph{software}, produziu \emph{waypoints} duplicados, resultando em uma paralisação do veículo por 17 minutos.
+
+Após esse tempo, a estimação da posição do veículo pelo GPS derivou e levou à geração de 4 \emph{waypoints} em modo de espaço aberto pelo planejador de trajetórias. Sendo assim, o comportamento autônomo do veículo comandou-o para acelerar em linha reta em direção ao muro do estacionamento. O veículo tornou-se irresponsivo a novos comandos do sistema autônomo, continuando a se mover em direção ao muro, e teve que ser parado por situação de emergência pelos organizadores do desafio.
+
+A equipe do TerraMax testou extensivamente o sistema novamente no mês seguinte ao desafio após as correções de falhas de \emph{software}, porém sem atualização de versão. Com um tempo total de teste de 8h e 125Km dirigidos com uma velocidade média de 16Km/h, o TerraMax obteve uma taxa de falha de 6.25\% (7 falhas em 112 sub-missões).
+
+
+
+
+ 
