@@ -1,0 +1,20 @@
+\select@language {portuguese}
+\contentsline {figure}{\numberline {1}{\ignorespaces Ve\IeC {\'\i }culo MTVR original (esq.) e TerraMax (dir.).\relax }}{5}{figure.caption.3}
+\contentsline {figure}{\numberline {2}{\ignorespaces Computadores embarcados robustos utilizados no TerraMax.\relax }}{6}{figure.caption.4}
+\contentsline {figure}{\numberline {3}{\ignorespaces Computadores embarcados robustos utilizados no TerraMax.\relax }}{6}{figure.caption.5}
+\contentsline {figure}{\numberline {4}{\ignorespaces Vis\IeC {\~a}o frontal e traseira do TerraMax, com destaque para os sensores instalados: c\IeC {\^a}meras (vermelho), LIDARs (verde) e antenas GPS (azul).\relax }}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {5}{\ignorespaces Modelo de LIDAR utilizado (esq.) e regi\IeC {\~a}o de scan (dir).\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {6}{\ignorespaces M\IeC {\'o}dulo INS utilizado pelo TerraMax e uma das antenas GPS.\relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {7}{\ignorespaces C\IeC {\^a}meras utilizadas no TerraMax: Flea 2 (WGA) e Pike 2 (HD).\relax }}{9}{figure.caption.9}
+\contentsline {figure}{\numberline {8}{\ignorespaces Disposi\IeC {\c c}\IeC {\~a}o das c\IeC {\^a}meras do sistema de vis\IeC {\~a}o.\relax }}{9}{figure.caption.10}
+\contentsline {figure}{\numberline {9}{\ignorespaces (a) Imagem original, (b) mapa de disparidade V com inclina\IeC {\c c}\IeC {\~a}o do ve\IeC {\'\i }culo associada e (c) mapa de disparidade (pontos em verde pr\IeC {\'o}ximos e em laranja mais afastados).\relax }}{10}{figure.caption.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{10}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{10}{subfigure.9.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{10}{subfigure.9.3}
+\contentsline {figure}{\numberline {10}{\ignorespaces Exemplos de detec\IeC {\c c}\IeC {\~a}o de faixas atrav\IeC {\'e}s do sistema trinocular.\relax }}{11}{figure.caption.12}
+\contentsline {figure}{\numberline {11}{\ignorespaces Resultados de detec\IeC {\c c}\IeC {\~a}o de obst\IeC {\'a}culos e faixa do sistema est\IeC {\'e}reo.\relax }}{12}{figure.caption.13}
+\contentsline {figure}{\numberline {12}{\ignorespaces Resultados de detec\IeC {\c c}\IeC {\~a}o de ve\IeC {\'\i }culos pelo sistema de vis\IeC {\~a}o lateral.\relax }}{12}{figure.caption.14}
+\contentsline {figure}{\numberline {13}{\ignorespaces Resultados de detec\IeC {\c c}\IeC {\~a}o de ve\IeC {\'\i }culos pelo sistema de vis\IeC {\~a}o traseira.\relax }}{13}{figure.caption.15}
+\contentsline {figure}{\numberline {14}{\ignorespaces Arquitetura de camadas do ve\IeC {\'\i }culo TerraMax.\relax }}{14}{figure.caption.16}
+\contentsline {figure}{\numberline {15}{\ignorespaces Blocos funcionais do \textit {Autonomous Vehicle Manager}.\relax }}{16}{figure.caption.17}
+\contentsline {figure}{\numberline {16}{\ignorespaces Route planning modelado como um grafo de segmentos.\relax }}{18}{figure.caption.18}
