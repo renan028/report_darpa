@@ -5,6 +5,24 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{natbib}
+\usepackage{subfig}
+
+%%---------------------------------------------------------------------------
+%% New commands
+%%---------------------------------------------------------------------------
+
+%Macros para moldura preta em figuras
+\newcommand{\myfboxthin}[1]{\setlength{\fboxsep}{0pt} \setlength{\fboxrule}{1.5pt} \fbox{#1}}
+\newcommand{\myfbox}[1]{\setlength{\fboxsep}{0pt} \setlength{\fboxrule}{2pt} \fbox{#1}}
+
+%Fig. references
+\newcommand{\reffig}[1]{Figura~\ref{#1}}
+\newcommand{\reffigp}[1]{(Figura~\ref{#1})}
+\newcommand{\refsec}[1]{Seção~\ref{#1}}
+\newcommand{\refchap}[1]{Capítulo~\ref{#1}}
+\newcommand{\refequ}[1]{(\ref{#1})}
+\newcommand{\degree}{^{\circ}}
+
 
 \begin{document}
 
@@ -19,7 +37,7 @@
 %----------------------------------------------------------------------------------------
 
 \textsc{\LARGE Universidade Federal do Rio de Janeiro}\\[1.5cm]
-\textsc{\Large Tópicos especiais em Sistemas Autônomos}\\[0.5cm] % Major heading
+\textsc{\Large COE-841 Tópicos especiais em Sistemas Autônomos}\\[0.5cm] % Major heading
 % such as course name
 %\textsc{\large TerraMax - Oshkosh}\\[0.5cm] % Minor heading such as course
 % title

@@ -24,4 +24,51 @@ Para o desafio urbano, a equipe incluiu novos sensores (câmeras e LIDARs), sobr
 
 \subsection{Equipe do DGC 2007}
 
-\subsection{Veículo e \emph{Hardware}}
+Para o desafio urbano de 2007, a equipe foi incrementada com as participações da Teledyne e da Universidade de Auburn. As equipes e respectivas atribuições são descritas abaixo:
+
+A \textbf{Oshkosh Corporation} é uma empresa americana voltada para a área de defesa, sendo a principal responsável pelo projeto. Suas atribuições no projeto foram providenciar o veículo, lidar com o gerenciamento do projeto, realizar a integração eletromecânica e o controle de software de médio/baixo nível.
+
+A \textbf{Teledyne Scientific and Imaging Company} é uma empresa americana de alta tecnologia voltada para pesquisa, desenvolvimento em sistemas de informação e sensoriamento de imagem para aplicações militares, espaciais e comerciais. No DGC 2007, foi responsável pelo software de alto nível, o comportamento autônomo do veículo, o que inclui controle de missão, planejamento de trajetórias e supervisão.
+
+O laboratório \textbf{VisLab}, da Universidade de Parma, na Itália, continuou no projeto com a responsabilidade de desenvolver os sistemas de visão. Juntamente com os dados dos LIDARs, o sistema de visão compõe a principal parte de percepção do veículo.
+
+A alemã \textbf{Ibeo Automotive Sensor} providenciou os LIDARs e a integração desses sensores com o software desenvolvido para o veículo. Finalmente, a \textbf{Universidade de Auburn}, nos Estados Unidos, ficou responsável pelo desenvolvimento do sistema inercial e de GPS.
+
+\subsection{Veículo e Visão Geral do \emph{Hardware}}
+
+O Terramax é uma versão adaptada de um veículo terrestre militar, um Medium Tactical Vehicle Replacement (MTVR), produzido pela Oshkosh. A equipe removeu boa parte da caçamba e o terceiro eixo de veículo, além de incluir suspensões no eixo traseiro para permitir melhor mobilidade em curvas estreitas no ambiente urbano. A \reffig{fig:veiculo} compara o veículo original com o adaptado.
+
+\begin{figure}[h]
+\centering
+\subfloat{\myfboxthin{\includegraphics[height=0.375\columnwidth]{figs/MTVR.jpg}}}\enskip
+\subfloat{\myfboxthin{\includegraphics[height=0.375\columnwidth]{figs/Terramax.jpg}}}
+\caption{Veículo MTVR original (esq.) e Terramax (dir.).}%
+\label{fig:veiculo}%
+\end{figure}
+
+A direção, aceleração e freio do veículo também foi adaptada para o sistema \emph{drive by wire} e o sistema embarcado (computadores e eletrônica) foi instalado abaixo do assento do passageiro. Além disso, diversos sensores foram instalados ao redor do veículo, como será descrito mais adiante.
+
+%Computadores
+Foi utilizado um total de 6 computadores embarcados disponíveis comercialmente (\emph{Commercial off-the-shelf}), além de controladores de baixo nível customizados pela Oshkosh. Dois computadores embarcados (A-Plus Mobile A20-MC) robustos e apropriados para ambientes rigorosos foram utilizados para o comportamento autônomo do veículo, curiosamente rodando Windows XP como sistema operacional. Um computador SmallPC Core Duo, também com certa certificação IP, foi usado para cada um dos quatro sistemas de visão do veículo, rodando Linux Fedora. A \reffig{fig:computadores} mostra os modelos utilizados.
+
+\begin{figure}[h]
+\centering
+\subfloat{\includegraphics[height=0.375\columnwidth]{figs/Aplus.jpg}}\quad
+\subfloat{\includegraphics[height=0.375\columnwidth]{figs/SmallPC.jpg}}
+\caption{Computadores embarcados robustos utilizados no Terramax.}%
+\label{fig:computadores}%
+\end{figure}
+
+O sistema de sensoriamento do TerraMax conta com 3 LIDARs (2 frontais e 1 traseiro), 11 câmeras instaladas ao redor do veículo e um sistema de navegação inercial com duas antenas de GPS posicionadas na parte superior. A \reffig{fig:sensores} destaca o local de instalação desses sensores no veículo.
+
+\begin{figure}[h]
+\centering
+\subfloat{\myfboxthin{\includegraphics[height=0.3\columnwidth]{figs/front.jpg}}}\enskip
+\subfloat{\myfboxthin{\includegraphics[height=0.3\columnwidth]{figs/rear.jpg}}}
+\caption{Visão frontal e traseira do TerraMax, com destaque para os sensores instalados: câmeras (vermelho), LIDARs (verde) e antenas GPS (azul).}%
+\label{fig:sensores}%
+\end{figure}
+
+Os objetivos e descrição de cada sistema de sensoriamento, bem como o hardware utilizado, serão detalhados na \refsec{sec:perception}.
+
+
